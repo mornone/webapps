@@ -1,0 +1,363 @@
+@charset"utf-8";
+
+/*
+html5doctor.com Reset Stylesheet v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+*/
+ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+}
+body {
+    line-height:1;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display:block;
+}
+nav ul {
+    list-style:none;
+}
+blockquote, q {
+    quotes:none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content:'';
+    content:none;
+}
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+}
+/* change colours to suit your needs */
+ ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+/* change colours to suit your needs */
+ mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+del {
+    text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+/* change border colour to suit your needs */
+ hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+input, select {
+    vertical-align:middle;
+}
+html {
+    height:100%;
+}
+body {
+    font-family:'Helvetica Nueu', Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust:none;
+    height:100%;
+}
+/**
+ * Custom Style
+ */
+ a {
+    color:#545454;
+}
+a:visited {
+    color:#525252;
+}
+div:focus {
+    outline:0;
+}
+ul {
+    list-style:none;
+}
+h1, h2, h3, h4, h5 {
+    font-weight:normal;
+}
+
+.header {
+    width: 100%;
+    height: 40%;
+    min-height: 150px;
+    overflow: hidden;
+    position: relative;
+}
+
+.header a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-animation: imageAnimation 18s linear infinite 0s;
+    -moz-animation: imageAnimation 18s linear infinite 0s;
+    -o-animation: imageAnimation 18s linear infinite 0s;
+    -ms-animation: imageAnimation 18s linear infinite 0s;
+    animation: imageAnimation 18s linear infinite 0s
+}
+.header a img{width: 100%;}
+.header a:nth-child(2) {
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s
+}
+.header a:nth-child(3) {
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s
+}
+
+@-webkit-keyframes imageAnimation {
+    0% {
+        opacity:0;
+        -webkit-animation-timing-function:ease-in
+    }
+    8% {
+        opacity:1;
+        -webkit-transform:scale(1.05);
+        -webkit-animation-timing-function:ease-out
+    }
+    28% {
+        opacity:1;
+        -webkit-transform:scale(1.1) rotate(3deg)
+    }
+    48% {
+        opacity:0;
+        -webkit-transform:scale(1.2) rotate(3deg)
+    }
+    100% {
+      opacity:0
+    }
+}
+@-moz-keyframes imageAnimation {
+    0% {
+        opacity:0;
+        -moz-animation-timing-function:ease-in
+    }
+    8% {
+        opacity:1;
+        -moz-transform:scale(1.05);
+        -moz-animation-timing-function:ease-out
+    }
+    28% {
+        opacity:1;
+        -moz-transform:scale(1.1) rotate(3deg)
+    }
+    48% {
+        opacity:0;
+        -moz-transform:scale(1.2) rotate(3deg)
+    }
+    100% {
+     opacity:0
+    }
+}
+@-o-keyframes imageAnimation {
+    0% {
+        opacity:0;
+        -o-animation-timing-function:ease-in
+    }
+    8% {
+        opacity:1;
+        -o-transform:scale(1.05);
+        -o-animation-timing-function:ease-out
+    }
+    28% {
+        opacity:1;
+        -o-transform:scale(1.1) rotate(3deg)
+    }
+    48% {
+        opacity:0;
+        -o-transform:scale(1.2) rotate(3deg)
+    }
+    100% {
+        opacity:0
+    }
+}
+@-ms-keyframes imageAnimation {
+    0% {
+        opacity:0;
+        -ms-animation-timing-function:ease-in
+    }
+    8% {
+        opacity:1;
+        -ms-transform:scale(1.05);
+        -ms-animation-timing-function:ease-out
+    }
+    28% {
+        opacity:1;
+        -ms-transform:scale(1.1) rotate(3deg)
+    }
+    48% {
+        opacity:0;
+        -ms-transform:scale(1.2) rotate(3deg)
+    }
+    100% {
+        opacity:0
+    }
+}
+@keyframes imageAnimation {
+    0% {
+    opacity:0;
+        animation-timing-function:ease-in
+    }
+    8% {
+        opacity:1;
+        transform:scale(1.05);
+        animation-timing-function:ease-out
+    }
+    28% {
+        opacity:1;
+        transform:scale(1.1) rotate(3deg)
+    }
+    48% {
+        opacity:0;
+        transform:scale(1.2) rotate(3deg)
+    }
+    100% {
+     opacity:0
+    }
+}
+
+
+.container {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    display: block;
+    background-size: cover;
+    -webkit-box-sizing: border-box;
+}
+.index-list-parent {
+    background-color: #E9E7E1;
+}
+.index-list {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 3px;
+}
+.index-list li {
+    display: -webkit-box;
+    width: 100%;
+    min-height: 110px;
+    text-align: center;
+    margin: 1px;
+    -webkit-box-flex: 1;
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -o-transition: height 0.5s;
+    transition: height 0.5s;
+}
+.index-list li.stair a{
+    margin: 3px;
+}
+
+.index-list li.stair img{
+    width: 100%;
+}
+
+
+.index-list li ul{
+    display: -webkit-box;
+    width: 100%;
+}
+
+.index-list li ul li{
+background: rgb(255,255,255); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C */
+}
+.index-list i{
+    color:#ffffff;
+    border: 2px solid #ffffff;
+    background: burlywood;
+    width: 31px;
+    height: 31px;
+    line-height: 31px;
+    border-radius: 28px;
+    font-size: 1.5em;
+    padding: 7px;
+    position: relative;
+    top: 10px;
+    display: block;
+    margin: 0 auto;
+}
+.index-list li:nth-child(2n) a {
+    border-right: 0;
+}
+
+.index-list li:nth-last-child(-n+2) a {
+    border-bottom: 0;
+}
+
+.index-list a {
+    color: #A3A3A3;
+    display: block;
+    vertical-align: middle;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    -webkit-box-flex: 1;
+}
+.index-list a:active{
+    background: #019ED3;
+    color:#ffffff;
+}
+.index-list .index-title {
+    margin-right: 0;
+    width: 100%;
+}
+
+.index-list .index-title a {
+    text-align: right;
+    padding-right: 10px;
+}
+.index-list .index-title .title {
+    font-size: 18px;
+}
+.index-list .index-title .date {
+    font-size: 12px;
+    margin-top: 8px;
+}
+.list-item--name {
+    display: block;
+    margin-top: 18px;
+    font-size: .8em;
+}
+.icon-img {
+    font-size: 2.5rem;
+}
