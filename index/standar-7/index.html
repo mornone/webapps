@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=no">
+    <title>首页</title>
+    <link rel="stylesheet" href="http://m.freeairnet.cn/static/css/common/font-awesome.css">
+    <link href="css/index.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div id="wrapper">
+                <div id="scroller">
+                    <a href="#">
+                        <img src="../images/list/list0.jpg" />
+                    </a>
+                    <a href="#">
+                        <img src="../images/list/list1.jpg" />
+                    </a>
+                    <a href="#">
+                        <img src="../images/list/list2.jpg" />
+                    </a>
+                    <a href="#">
+                        <img src="../images/list/list3.jpg" />
+                    </a>
+                    <a href="#">
+                        <img src="../images/list/list5.jpg" />
+                    </a>
+                </div>
+            </div>
+            <div class="footer">
+                <ul id="indicator"></ul>
+            </div>
+        </header>
+        <section class="index-list-parent">
+            <ul class="index-list">
+                <li>
+                    <a href="#" style="background-color:#36AAE7;-webkit-box-flex: 2;">
+                        <span class="list-item--name">频道1</span>
+                        <i class="icon-img icon-plane"></i>
+                    </a>
+                    <a href="#" style="background-color:#688CE2">
+                        <span class="list-item--name">频道2</span>
+                        <i class="icon-img icon-search"></i>
+                    </a>
+                    <a href="#" style="background-color:#8D67E0">
+                        <span class="list-item--name">频道3</span>
+                        <i class="icon-img icon-microphone"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" style="background-color:#84D018">
+                        <span class="list-item--name">频道4</span>
+                        <i class="icon-img icon-volume-up"></i>
+                    </a>
+                    <a href="#" style="background-color:#14C761">
+                        <span class="list-item--name">频道5</span>
+                        <i class="icon-img icon-bullhorn"></i>
+                    </a>
+                </li>
+                <li class="noneB">
+                    <a href="#" style="background-color:#F4B613">
+                        <span class="list-item--name">频道7</span>
+                        <i class="icon-img icon-tag"></i>
+                    </a>
+                    <a href="#" style="background-color:#FF8A4A">
+                        <span class="list-item--name">频道8</span>
+                        <i class="icon-img icon-shopping-cart"></i>
+                    </a>
+                    <a href="#" style="background-color:#FC5366">
+                        <span class="list-item--name">频道9</span>
+                        <i class="icon-img icon-music"></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <script src="../js/zepto.min.js"></script>
+    <script src="../js/iscroll.js"></script>
+    <script>
+        var myScroll;
+        function loaded() {
+            myScroll = new iScroll('wrapper', {
+                snap: true,
+                momentum: false,
+                hScrollbar: false,
+                onScrollEnd: function () {
+                    document.querySelector('#indicator > li.seld').className = '';
+                    document.querySelector('#indicator > li:nth-child(' + (this.currPageX+1) + ')').className = 'seld';
+                }
+             });
+        }
+        document.addEventListener('DOMContentLoaded', loaded, false);
+    </script>
+    <script src="../js/index.js"></script>
+
+</body>
+
+</html>
